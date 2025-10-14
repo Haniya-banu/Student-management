@@ -1,0 +1,16 @@
+
+ button{
+  background:  rgba(101, 177, 148, 0.9);
+  color: white;
+  font-size: 16px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #0d47a1;
+}
+

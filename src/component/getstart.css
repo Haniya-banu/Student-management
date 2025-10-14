@@ -1,0 +1,215 @@
+body,html{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.get-container{
+  position: relative;
+  height: 100vh;
+  min-width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  background-image: url('../assets/laptop-background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.overlay {
+  position: absolute;
+  top: 0%;
+  /* right: 300px; */
+  inset: 0;
+  background-color: rgba(0, 40, 80, 0.5); 
+  z-index: 1;
+  width: 700px;
+  color: black;
+  
+}
+
+.content {
+  position: relative;
+  right: 150px;
+  z-index: 2;
+  max-width: 600px;
+  
+}
+
+.content h1{
+  font-size: 2rem;
+  margin-bottom: 1rem;
+    color: white;
+    
+}
+
+.para{
+  font-size: 20px;
+  margin-bottom: 8rem;
+  text-shadow: 1px 1px 3px blue;
+  color: rgb(4, 67, 67);
+  font-family: cursive;
+  
+}
+
+.icons {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.logoimg{
+  height: 100px;
+}
+
+.get-button{
+  background-color: #facc15; 
+  color: #1e3a8a;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 8rem;
+}
+
+.content button:hover {
+  background-color: #fbbf24;
+}
+
+.footer-note {
+  margin-top: 2rem;
+  color: #fde68a;
+  font-size: 0.9rem;
+}
+
+.button-group{
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  
+ 
+}
+.button-group button{
+   background-color: gainsboro;
+   color: black;
+   border-radius: 15px;
+   font-family: cursive;
+   font-size: 14px;
+}
+
+/* =======================
+   Mobile Responsive
+   ======================= */
+@media (max-width: 768px) {
+
+ 
+  .overlay{
+    display: none;
+  }
+
+  .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40%;
+  }
+  .content h1 {
+    font-size: 1.5rem;
+  }
+
+  .para {
+    /* font-size: 1rem;
+    margin-bottom: 2rem; */
+    display: none;
+  }
+
+  .icons {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .get-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .footer-note {
+    font-size: 0.8rem;
+  }
+
+  .button-group button {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .get-container {
+    background-image: url('../assets/laptop-background.jpg');
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* start from top */
+    padding: 2rem 1rem; /* safe padding */
+    overflow-x: hidden; 
+  }
+
+  .overlay{
+    width: 100%;  
+    height: 10%;     
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 40, 80, 0.5); /* semi-transparent dark overlay */
+    z-index: 1;
+  }
+
+  .content {
+    max-width: 90%;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .content h1 {
+    font-size: 1.5rem;
+  }
+
+  .para {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .icons {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .get-button {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .footer-note {
+    font-size: 0.75rem;
+  }
+
+  .button-group {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .button-group button {
+    font-size: 0.85rem;
+    padding: 0.6rem 1rem;
+  }
+}
