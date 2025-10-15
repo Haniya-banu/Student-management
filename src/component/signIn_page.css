@@ -1,41 +1,32 @@
-
-/* body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-} */
-
-
-
-.container1{
-  height: 100vh; 
-  width: 100vw;  
+/* Main container */
+.container1 {
+  height: 100vh;
+  width: 100vw;
   background-image: url('../assets/bg for all.jpg');
   background-repeat: no-repeat;
-  background-size:auto;
   background-position: center;
-  background-attachment: fixed;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-size: 100vw 100vh;
+  padding: 10px;
 }
 
+/* Card container */
 .card-contain {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   height: 500px;
-  width: 1100px;
- /* border: 2px solid rgb(249, 247, 247);  */
-  border-radius: 12px;    
-  background-color: #ffffff; 
-  box-shadow: 10px 14px 12px rgba(221, 118, 22, 0.1); 
+  max-width: 1100px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 10px 14px 12px rgba(221, 118, 22, 0.1);
   overflow: hidden;
 }
 
-
+/* Left card (form) */
 .card-left {
   flex: 1;
   padding: 30px;
@@ -43,50 +34,63 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
- background-color: aliceblue;
- height: 500px;
- width: 500px;
+  background-color: aliceblue;
+  min-height: 500px;
 }
+
 .card-left h2 {
   color: #2563EB;
   margin-bottom: 15px;
   font-size: 20px;
+  text-align: center;
 }
 
 .card-left input {
-  height: 35px;
+  height: 40px;
   width: 250px;
   border-radius: 5px;
-  padding: 5px 0px 5px 30px;
-  margin:10px;
+  padding: 0 10px;
+  margin: 10px 0;
   border: 1px solid #999;
-  transition: opacity 0.3s ease;
-   background-color: beige;
-}
-
-.card-left button{
-  border-radius: 10px;
-  background-color: #187ebd;
+  background-color: beige;
+  transition: background-color 0.3s ease;
 }
 
 .card-left input:hover {
   background-color: white;
 }
-.fs{
-  text-decoration: none;
-  font-weight: 400;
-  font-size: large;
-  font-size: 15px;
-  margin-right: 20px;
+
+.card-left button {
+  border-radius: 10px;
+  background-color: #187ebd;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
+.card-left button:hover {
+  background-color: #0f5a8f;
+}
+
+.fs {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 15px;
+  margin: 10px 0;
+  color: #333;
+}
+
+/* Right card (image) */
 .card-right {
   flex: 1;
-  position: relative; 
+  position: relative;
   width: 600px;
   height: 500px;
   overflow: hidden;
-  background-color: transparent; 
+  background-color: transparent;
 }
 
 .right-image {
@@ -94,28 +98,28 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  
 }
 
 .cardtext {
   position: absolute;
-  top: 300px;
+  bottom: 30px;
   left: 50px;
   color: white;
-  text-align: center;
+  text-align: left;
   font-size: 30px;
   font-family: 'Times New Roman';
   padding: 10px;
   border-radius: 5px;
 }
 
-
-.err{
+/* Error and login text */
+.err {
   font-size: 14px;
   color: red;
 }
-.login{
-  color:black;
+
+.login {
+  color: black;
   font-size: large;
 }
 
@@ -127,30 +131,25 @@
     height: auto;
   }
 
-  .card-right{
-    display: none;
-  }
-
-  .card-left{
-    width: 100%;
-    height: auto;
+  .card-right {
+    display: none; /* Hide image on tablet */
   }
 
   .card-left {
+    width: 100%;
+    min-height: auto;
     padding: 20px;
-    height: auto;
   }
 
-  .card-left input {
+  .card-left input,
+  .card-left button {
     width: 100%;
     max-width: 280px;
   }
 
   .card-left button {
-    width: 100%;
-    max-width: 280px;
-    padding: 10px;
-    font-size: 15px;
+    padding: 12px;
+    font-size: 16px;
   }
 
   .cardtext {
@@ -158,26 +157,20 @@
     margin-top: 15px;
     font-size: 18px;
     text-align: center;
-    color: #333; 
-  }
-
-  .right-image {
-    max-height: 200px;
-    object-fit: contain;
+    color: #333;
   }
 }
 
 @media (max-width: 600px) {
   .container1 {
     background-size: cover;
-    background-attachment: scroll;
     padding: 10px;
   }
 
   .card-contain {
+    width: 100%;
     box-shadow: none;
     border-radius: 8px;
-    width: 80%;
   }
 
   .card-left h2 {
@@ -186,7 +179,7 @@
 
   .card-left input {
     font-size: 14px;
-    padding-left: 35px;
+    padding-left: 10px;
   }
 
   .card-left button {
@@ -197,18 +190,12 @@
     font-size: 13px;
     margin: 10px 0;
   }
-
-  .cardtext {
-    font-size: 15px;
-    padding: 5px;
-  }
 }
 
 @media (max-width: 480px) {
-
-  .card-left{
-    box-shadow: 2px 2px 12px rgb(20, 6, 6);
-    box-sizing: border-box;
+  .card-left {
+    box-shadow: 2px 2px 12px rgba(20, 6, 6, 0.2);
+    padding: 15px;
   }
 
   .card-left h2 {
@@ -223,5 +210,6 @@
 
   .cardtext {
     font-size: 14px;
+    padding: 5px;
   }
 }
