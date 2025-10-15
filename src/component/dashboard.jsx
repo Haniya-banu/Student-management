@@ -37,7 +37,7 @@ export default function Dashboard() {
     let ignore = false;
     const fetchStudents = async () => {
       try {
-        const res = await axios.get('http://127.0.0.1:8000/stud_data', 
+        const res = await axios.get('https://db-student-api.vercel.app/stud_data', 
           {
              headers: {
           Authorization: `Bearer ${token}`, // ✅ include token here
@@ -76,7 +76,7 @@ export default function Dashboard() {
 
   const updateStudent = async () => {
     try {
-      const res = await axios.put(`http://127.0.0.1:8000/update/${view.id}`, editForm);
+      const res = await axios.put(`https://db-student-api.vercel.app/update/${view.id}`, editForm);
       setStudentlist(prev =>
         prev.map(s => (s.id === view.id ? editForm : s))
       );
@@ -97,7 +97,7 @@ export default function Dashboard() {
   const deleteStudent = async (e) => {
     e.preventDefault();
     try {
-      await axios.delete(`http://127.0.0.1:8000/del/${view.id}`);
+      await axios.delete(`https://db-student-api.vercel.app/del/${view.id}`);
       setStudentlist(prev => prev.filter(s => s.id !== view.id));
       setDeleteItem(false);
     } catch (err) {

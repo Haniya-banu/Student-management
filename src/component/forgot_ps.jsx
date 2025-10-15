@@ -27,7 +27,7 @@ export default function Forgot_ps() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      const res = await axios.get('http://127.0.0.1:8000/email_check',{params: {email} } );
+      const res = await axios.get('https://db-student-api.vercel.app/email_check',{params: {email} } );
       console.log(res.data);
       if(res.data.status === 'success'){
       alert(res.data.status)
@@ -52,7 +52,7 @@ export default function Forgot_ps() {
   const verifyOTP = async (e) => {
     
     try {
-      const res = await axios.post('http://127.0.0.1:8000/send-otp', {
+      const res = await axios.post('https://db-student-api.vercel.app/send-otp', {
          email:email,
          private_key:private_key });
         console.log(res.data.status);

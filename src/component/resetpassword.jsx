@@ -47,7 +47,7 @@ export default function Resetpassord() {
 });
 
     try{
-        const res = await axios.put('http://127.0.0.1:8000/reset-password',{
+        const res = await axios.put('https://db-student-api.vercel.app/reset-password',{
           email:email,
           new_password:newPassword,
           confirm_password:confirmPassword

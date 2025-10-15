@@ -42,7 +42,7 @@ export default function NewAdd() {
 try {
   const token = localStorage.getItem("token");
   
-  const res = await axios.post("http://127.0.0.1:8000/insert_stud", data,
+  const res = await axios.post("https://db-student-api.vercel.app/insert_stud", data,
     {
       headers: {
         Authorization: `Bearer ${token}`, // ✅ send token with request
