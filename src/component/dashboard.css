@@ -435,13 +435,13 @@ table tr:hover {
   .head-container {
     background: url('../assets/bg for all.jpg') no-repeat center/cover;
     height: 150px;
-    width: 480px;
+    width: 460px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    margin-left: 10px;
+    margin-left: 0px;
   }
 
   .logo-img {
@@ -486,7 +486,7 @@ table tr:hover {
   }
 
   .search-input {
-    width: 50%;
+    width: 40%;
     padding: 10px 0 10px 8px;
     border: 1px solid #cdbc23;
     border-radius: 6px;
