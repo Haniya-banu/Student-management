@@ -1,78 +1,89 @@
-
 .form-container {
-width: 100vw;
-height: 100vh;
-display: flex;
-justify-content: center;
-align-items: center;
-/* background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%); */
-padding: 20px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%); */
+  padding: 20px;
 }
 
 .form11 {
-width: 400px;
-background: rgba(161, 20, 20, 0.15);
-backdrop-filter: blur(12px);
-border-radius: 15px;
-padding: 30px 25px;
-box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
-display: flex;
-flex-direction: column;
-gap: 18px;
+  width: 400px;
+  background: rgba(161, 20, 20, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  padding: 30px 25px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 
 .form11 b {
-font-size: 14px;
-font-weight: 600;
-color: #fff;
-display: flex;
-flex-direction: column;
-gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .form11 input {
-padding: 10px 12px;
-border-radius: 8px;
-border: none;
-outline: none;
-font-size: 14px;
-background: rgba(255, 255, 255, 0.85);
-transition: all 0.3s ease;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.85);
+  transition: all 0.3s ease;
 }
 
 .form11 input:focus {
-background: #fff;
-box-shadow: 0 0 8px rgba(100, 150, 255, 0.6);
+  background: #fff;
+  box-shadow: 0 0 8px rgba(100, 150, 255, 0.6);
 }
 
-.close{
+.close {
   height: 30px;
   padding: 8px;
   justify-content: center;
   align-items: center;
   margin-left: 350px;
-  background-color:  rgba(161, 20, 20, 0.15);
+  background-color: rgba(161, 20, 20, 0.15);
 }
 
 
 /* 📱 Mobile Responsive */
 @media (max-width: 480px) {
-.form11 {
-width: 90%;
-padding: 20px;
-}
+  .form11 {
+    width: 90%;
+    padding: 20px;
+    height: auto;
+    margin-top: 30px;
+  }
 
-.form11 b {
-font-size: 13px;
-}
+  .close {
+    height: 30px;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 350px;
+    background-color: gray;
+    width: 35px;
+  }
 
-.form11 input {
-font-size: 13px;
-padding: 8px 10px;
-}
+  .form11 b {
+    font-size: 13px;
+  }
 
-.new-btn {
-font-size: 14px;
-padding: 10px;
-}
+  .form11 input {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+
+  .new-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
 }

@@ -15,9 +15,9 @@
   justify-content: space-evenly;
   align-items: center;
   background: url('../assets/bg for all.jpg') no-repeat center/cover;
- width: 100%;
-max-width: 1280px;
-margin-left: 250px;
+  width: 100%;
+  max-width: 1280px;
+  margin-left: 250px;
 
 }
 
@@ -87,13 +87,14 @@ button:hover {
 }
 
 
-.table-box{
+.table-box {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-   margin-left: 60px;
+  margin-left: 60px;
 }
+
 /* count students */
 .stats-container {
   display: flex;
@@ -140,7 +141,7 @@ button:hover {
 }
 
 table {
-  width:1010px;
+  width: 1010px;
   border-collapse: collapse;
   /* margin-left: 50px; */
 }
@@ -185,7 +186,7 @@ table tr:hover {
   background: #388e3c;
 }
 
-.dlt-card{
+.dlt-card {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -197,11 +198,11 @@ table tr:hover {
   margin-top: 10px;
 }
 
-.dlt-card p{
+.dlt-card p {
   padding: 0 40px;
   font-size: 16px;
 }
- 
+
 .dlt-card input {
   margin: 5px 0px;
   padding: 7px 15px;
@@ -225,7 +226,7 @@ table tr:hover {
   display: block;
 }
 
-.edit-popup{
+.edit-popup {
   display: none;
 }
 
@@ -426,17 +427,21 @@ table tr:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    overflow-x: auto;
+
   }
 
   .head-container {
-    /* background: url('../assets/bg for all.jpg') no-repeat center/cover; */
+    background: url('../assets/bg for all.jpg') no-repeat center/cover;
     height: 150px;
-    min-width: 100vw;
+    width: 480px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    /* overflow-y: scroll; */
+    overflow: hidden;
+    margin-left: 10px;
   }
 
   .logo-img {
@@ -444,6 +449,9 @@ table tr:hover {
   }
 
   .newadd {
+    position: absolute;
+    top: 10px;
+    left: 40px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -456,6 +464,7 @@ table tr:hover {
     background-color: rgb(198, 194, 184);
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    flex-wrap: wrap;
   }
 
   .newadd-btn button {
@@ -491,34 +500,31 @@ table tr:hover {
   }
 
 
-
-
   .sidebar.open {
     background-color: transparent;
+    position: absolute;
+    left: 15%;
+    top: 6px;
     height: 10px;
     width: 30px;
-
   }
 
-  .sidebar {
-    margin-top: 40px;
-  }
 
   .sidebar.collapsed {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 300px;
-    width: 35%;
+    height: 280px;
+    width: 50%;
     padding: 20px;
   }
 
   .collapsed button {
     color: yellow;
-    margin-left: -250px;
     margin-top: 8px;
     margin-bottom: 15px;
+    margin-left: auto;
   }
 
   table,
@@ -527,15 +533,21 @@ table tr:hover {
   }
 
   .table-container {
-    margin-left: 430px;
-  }
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: scroll;
+    width: 100vw;
 
+  }
 
   table th,
   table td {
-    padding: 4px;
+    padding: 10px 20px;
     width: auto;
     height: 25px;
+    font-size: 12px;
 
   }
 

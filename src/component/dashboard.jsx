@@ -129,8 +129,6 @@ export default function Dashboard() {
 
         <div className="logo-contain">
           <img src={Logo} alt="" className='logo-img' />
-          {/* <div className='hr-tag'>____________________________________________________________________________________________________________________________________________________________________</div> */}
-
         </div>
 
 
@@ -185,7 +183,7 @@ export default function Dashboard() {
                   <th>Name</th>
                   <th>Ug degree</th>
                   <th>Course</th>
-                  <th>Email</th>
+                  <th>Address</th>
                   <th>Phone No</th>
                   <th>Edit</th>
                   <th>Action</th>

@@ -95,16 +95,8 @@ export default function SignIn_Page() {
            <h2>Welcome EduTrack !</h2>
 
            <h4>LOGIN</h4>
-           <div style={{ position: 'relative', width: '300px' }}>
-              <FaUser 
-      style={{ 
-        position: 'absolute', 
-        top: '50%', 
-        left: '15px', 
-        transform: 'translateY(-50%)', 
-        color: 'grey' 
-        }} 
-        />
+           <div className='input-contain'>
+              <FaUser className='iconn'/>
           <input
             type="text"
             name="email"
@@ -116,15 +108,9 @@ export default function SignIn_Page() {
           {errors.email && <p className='err'>{errors.email}</p>}
 
 
-          <div style={{ position: 'relative', width: '300px' }}>
+          <div className='input-contain'>
           <TbLockPassword 
-        style={{ 
-        position: 'absolute', 
-        top: '50%', 
-        left: '15px', 
-        transform: 'translateY(-50%)', 
-        color: 'grey' 
-        }} 
+          className='iconn'
           />
           <input
             type="password"
